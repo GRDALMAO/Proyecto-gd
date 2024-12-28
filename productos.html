@@ -1,102 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GigiDeco</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="./Img/GigiDecologo.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Productos</h1>
-        <img src="./Img/GigiDecologo.png" alt="200 " />
-        <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="servicios.html">Servicios </a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-               
-         <section id="productos">
-               
-            <div class="productos-container">
-                    <div class="card">
-                        <img src="./Img/Lampara Venecia.jpg" alt="Producto 1">
-                        <h3>Lámpara Venecia</h3>
-                        <p>Lámpara colgante tejida en kraft.
-                          Medidas: 110x050 de alto.</p>
-                    </div>
-                    <div class="card">
-                        <img src="./Img/lampara madison.jpg" alt="Producto 2">
-                        <h3>Lámpara Madison</h3>
-                        <p>Descripción del producto 2</p>
-                    </div>
-                    <div class="card">
-                        <img src="./Img/Velador Elena.jpg" alt="Producto 2">
-                        <h3>Velador Elena</h3>
-                        <p>Velador de hierro y aluminio con borde dorado.
+      <h1>Productos</h1>
+      <img src="./Img/GigiDecologo.png" alt="200 " />
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div id="carrito-info">
+        <span id="contador-carrito">0</span> productos en el carrito
+      </div>
+      <button id="abrir-carrito" onclick="abrirCarrito()">Ver Carrito</button>
+    </header>
 
-                          Medidas: 48 cm alto x 30 cm de diametro - Pantalla de lino 30 cm de diametro</p>
-                    </div>
-                    
-                      <div class="card">
-                          <img src="./Img/Respaldo Grecia.jpg" alt="Producto 1">
-                          <h3>Respaldo Grecia</h3>
-                          <p>Respaldo con funda de tusor de algodón.<br> Todos los respaldos se hacen de 120cm de altura, el ancho puede ser desde 90 a 200cm.</p>
-                      </div>
-                      <div class="card">
-                          <img src="./Img/Puff Italia.jpg" alt="Producto 2">
-                          <h3>Puff Italia</h3>
-                          <p>Puff tejido con fibra Kraft, interior de fenólico y mimbre.</p>
-                      </div>
-                      <div class="card">
-                          <img src="./Img/Recibidor Dubái .jpg" alt="Producto 2">
-                          <h3>Recibidor Dubái</h3>
-                          <p>Fabricado en madera maciza de álamo teñida con tinte petiribi y lustre semimate.</p>
-                       </div>   
-                    
-                       <div class="card">
-                            <img src="./Img/Jarra de noche stars.jpg" alt="Producto 1">
-                            <h3>Jarra de Noche</h3>
-                            <p>de vidrio con estrellas</p>
-                        </div>
-                        <div class="card">
-                            <img src="./Img/Vela Malena.jpg" alt="Producto 2">
-                            <h3>Vela Malena</h3>
-                            <p>Aroma Jazmín, Verbena, Vainilla</p>
-                        </div>
-                        <div class="card">
-                            <img src="./Img/Bandeja Naxos.jpg" alt="Producto 2">
-                            <h3>Bandeja Naxos</h3>
-                            <p>Medidas 40 x 40 cm</p>
-                        </div>
-                      
-                    </div>
-                    
-                
-      </main>
-      <footer class="footer">
-        <p>&copy; 2024 Todos los derechos reservados</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/GigiDeco" target="_blank">
-            <i class="fab fa-facebook-f"></i> Facebook
-          </a>
-          <a href="https://www.instagram.com/GigiDeco" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-          <a href="https://www.twitter.com/GigiDeco" target="_blank">
-            <i class="fab fa-twitter"></i> Twitter
-          </a>
+    <main>
+      <section id="productos">
+        <div class="productos-container" id="productos-container">
+          <!-- Productos cargados dinámicamente por JavaScript BABE-->
         </div>
-      </footer>
-    
-</body>
+      </section>
+    </main>
+    <div id="carritoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarCarrito()">&times;</span>
+        <div class="modal-header">
+          <h2>Carrito de Compras</h2>
+        </div>
+        <div class="modal-body" id="productos-en-carrito">
+          <!-- Los productos del carrito se mostrarán aquí -->
+        </div>
+        <div class="modal-footer">
+          <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Todos los derechos reservados</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/GigiDeco" target="_blank">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/GigiDeco" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.twitter.com/GigiDeco" target="_blank">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js" defer></script>
 </html>
