@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Lámpara Venecia",
+    "description": "Lámpara colgante tejida en kraft. Medidas: 110x050 de alto.",
+    "image": "Img/Lampara Venecia.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Lámpara Madison",
+    "description": "Descripción del producto 2",
+    "image": "Img/lampara madison.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Velador Elena",
+    "description": "Velador de hierro y aluminio con borde dorado. Medidas: 48 cm alto x 30 cm de diámetro.",
+    "image": "Img/Velador Elena.jpg"
+  }
+]
